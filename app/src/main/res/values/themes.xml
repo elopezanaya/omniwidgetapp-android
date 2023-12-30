@@ -2,8 +2,10 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MyApplication" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/my_light_primary</item>
     </style>
 
     <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+
+    <color name="my_light_primary">#150F22</color>
 </resources>
