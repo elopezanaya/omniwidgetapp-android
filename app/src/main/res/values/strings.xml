@@ -4,4 +4,6 @@
     <string name="load_script">Load Script</string>
     <string name="enter_url">Enter URL</string>
     <string name="widget_script">Widget Script</string>
+    <string name="load_from_url">Load from URL</string>
+    <string name="delete_url">Delete URL</string>
 </resources>

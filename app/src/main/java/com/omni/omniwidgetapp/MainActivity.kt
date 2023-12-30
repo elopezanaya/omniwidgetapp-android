@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val launchButton: Button = findViewById<Button>(R.id.buttonLoadUrl)
         editTextUrl = findViewById(R.id.editTextUrl)
-        editTextData = findViewById(R.id.editTextData)
+        editTextData = findViewById(R.id.editTextScript)
 
         launchButton.setOnClickListener {
             val wb = findViewById<WebView>(R.id.webviewLCW)
