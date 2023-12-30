@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#333333"
-    android:foregroundTint="#393B3C"
+    android:background="#150F22"
+    android:foregroundTint="#150F22"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -31,7 +31,7 @@
 
                 <EditText
                     android:id="@+id/editTextUrl"
-                    android:layout_width="250dp"
+                    android:layout_width="300dp"
                     android:layout_height="100dp"
                     android:layout_marginStart="25dp"
                     android:layout_marginTop="30dp"
@@ -40,14 +40,15 @@
                     android:allowUndo="true"
                     android:autofillHints=""
                     android:background="@drawable/rounded_edittext_bg"
-                    android:backgroundTint="#3E3E3E"
+                    android:backgroundTint="#433E6A"
                     android:contextClickable="false"
                     android:cursorVisible="false"
+                    android:fontFamily="@font/roboto_mono"
                     android:hint="@string/enter_url"
                     android:inputType="textUri"
                     android:textAlignment="gravity"
-                    android:textColor="#9A9898"
-                    android:textColorHint="#9F9D9D"
+                    android:textColor="#9CECD8"
+                    android:textColorHint="#B2A6D8"
                     android:textSize="18sp"
                     android:verticalScrollbarPosition="defaultPosition"
                     tools:ignore="TextFields" />
@@ -57,26 +58,26 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/buttonLoadUrl"
-                        android:layout_width="100dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="35dp"
-                        android:backgroundTint="#F44336"
-                        android:onClick="loadUrl"
-                        android:text="@string/load_from_url"
-                        android:textAlignment="inherit"
-                        app:iconTint="#F6F6F3"
-                        app:strokeColor="#E91E63" />
-
-                    <Button
-                        android:id="@+id/button"
-                        android:layout_width="match_parent"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="-50dp"
-                        android:text="@string/delete_url"
-                        app:icon="@android:drawable/ic_menu_delete" />
+                        android:layout_marginTop="35dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_button"
+                        android:backgroundTint="#94FADB"
+                        android:src="@android:drawable/ic_media_play" />
+
+                    <ImageButton
+                        android:id="@+id/deleteButtonURL"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_button"
+                        android:backgroundTint="#E05F80"
+                        android:contentDescription="@string/delete_content_in_script_section"
+                        app:srcCompat="@android:drawable/ic_menu_delete" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -89,13 +90,15 @@
 
                 <EditText
                     android:id="@+id/editTextScript"
-                    android:layout_width="250dp"
+                    android:layout_width="300dp"
                     android:layout_height="150dp"
                     android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="25dp"
                     android:autofillHints=""
                     android:background="@drawable/rounded_edittext_bg"
-                    android:backgroundTint="#3E3E3E"
-                    android:foregroundTint="#00BCD4"
+                    android:backgroundTint="#433E6A"
+                    android:fontFamily="@font/roboto_mono"
                     android:hint="@string/widget_script"
                     android:linksClickable="false"
                     android:longClickable="false"
@@ -105,13 +108,13 @@
                     android:singleLine="false"
                     android:soundEffectsEnabled="false"
                     android:textAlignment="gravity"
-                    android:textColor="#9A9898"
-                    android:textColorHint="#9F9D9D"
+                    android:textColor="#9CECD8"
+                    android:textColorHint="#B2A6D8"
                     android:textIsSelectable="true"
+
                     android:textSize="18sp"
                     android:textStyle="normal"
                     android:verticalScrollbarPosition="left"
-
                     tools:ignore="TextFields" />
 
                 <LinearLayout
@@ -119,20 +122,26 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/buttonLoadScript"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="150dp"
-                        android:backgroundTint="#E91E63"
-                        android:text="@string/load_script" />
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_button"
+                        android:backgroundTint="#93F9DA"
+                        android:src="@android:drawable/ic_media_play" />
 
-                    <Button
-                        android:id="@+id/button3"
-                        android:layout_width="100dp"
-                        android:layout_height="50dp"
-                        android:text="puro mame" />
+                    <ImageButton
+                        android:id="@+id/buttonDeleteScript"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_button"
+                        android:backgroundTint="#DF5F80"
+                        android:src="@android:drawable/ic_menu_delete" />
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -151,9 +160,7 @@
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="10dp"
                 android:foregroundTint="#00BCD4"
-                >
-
-            </WebView>
+                />
 
         </LinearLayout>
     </RelativeLayout>

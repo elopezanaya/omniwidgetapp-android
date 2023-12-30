@@ -9,6 +9,7 @@ import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 
 class MainActivity : AppCompatActivity() {
     private lateinit var editTextUrl: EditText
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val launchButton: Button = findViewById<Button>(R.id.buttonLoadUrl)
+        val launchButton: ImageButton = findViewById<ImageButton>(R.id.buttonLoadUrl)
         editTextUrl = findViewById(R.id.editTextUrl)
         editTextData = findViewById(R.id.editTextScript)
 
