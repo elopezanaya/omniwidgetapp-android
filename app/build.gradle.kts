@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myapplication"
+    namespace = "com.omni.omniwidgetapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.myapplication"
+        applicationId = "com.omni.omniwidgetappp"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

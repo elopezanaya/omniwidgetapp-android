@@ -5,47 +5,99 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
+    android:foregroundTint="#2196F3"
     tools:context=".MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-    <EditText
-        android:id="@+id/editTextUrl"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter URL"/>
-
-    <EditText
-        android:id="@+id/editTextData"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextUrl"
-        android:layout_marginTop="16dp"
-        android:hint="Enter Data"/>
-
-    <Button
-        android:id="@+id/buttonLoadUrl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextData"
-        android:layout_marginTop="16dp"
-        android:text="Load URL"
-        android:onClick="loadUrl"/>
-
-    <WebView
-        android:id="@+id/webviewLCW"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:background="#CDDC39"
-        android:layout_marginTop="16dp"
-        android:layout_below="@id/buttonLoadUrl"
-        >
-
-    </WebView>
+        tools:ignore="WebViewLayout">
 
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/buttonLoadUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextData"
+            android:layout_marginTop="-2dp"
+            android:backgroundTint="#FF9800"
+            android:insetLeft="200dp"
+            android:insetRight="10dp"
+            android:onClick="loadUrl"
+            android:paddingStart="10dp"
+            android:text="@string/load_url" />
+
+        <Button
+            android:id="@+id/buttonLoadScript"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/editTextData"
+            android:layout_alignEnd="@id/buttonLoadUrl"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="150dp"
+            android:backgroundTint="#E91E63"
+            android:text="@string/load_script" />
+
+        <EditText
+            android:id="@+id/editTextUrl"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="10dp"
+            android:allowUndo="true"
+            android:autofillHints=""
+            android:backgroundTint="#FFC107"
+            android:contextClickable="false"
+            android:cursorVisible="false"
+            android:foregroundTint="#00BCD4"
+            android:hint="@string/enter_url"
+            android:inputType="textUri"
+            android:textAlignment="gravity"
+            android:textSize="12sp"
+            android:verticalScrollbarPosition="defaultPosition"
+            tools:ignore="TextFields" />
+
+        <EditText
+            android:id="@+id/editTextData"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/editTextUrl"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:autofillHints=""
+            android:backgroundTint="#8DC1C8"
+            android:foregroundTint="#00BCD4"
+            android:hint="@string/widget_script"
+            android:linksClickable="false"
+            android:longClickable="false"
+            android:nestedScrollingEnabled="true"
+            android:scrollbars="horizontal|vertical"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:soundEffectsEnabled="false"
+            android:textAlignment="gravity"
+            android:textIsSelectable="true"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:verticalScrollbarPosition="left"
+            tools:ignore="TextFields" />
+
+        <WebView
+            android:id="@+id/webviewLCW"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_below="@id/buttonLoadUrl"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:background="#FF9800"
+            android:foregroundTint="#00BCD4">
+
+        </WebView>
+
+
+    </RelativeLayout>
 </ScrollView>

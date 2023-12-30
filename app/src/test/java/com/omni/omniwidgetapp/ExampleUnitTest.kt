@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.omni.omniwidgetapp
 
 import org.junit.Test
 
