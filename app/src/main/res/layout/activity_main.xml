@@ -19,10 +19,6 @@
             android:orientation="vertical"
             tools:ignore="UselessParent">
 
-            <!-- EditText for URL -->
-
-            <!-- Button for loading URL -->
-
             <LinearLayout
                 android:id="@+id/urlSection"
                 android:layout_width="match_parent"
@@ -66,17 +62,19 @@
                         android:layout_marginEnd="10dp"
                         android:background="@drawable/rounded_button"
                         android:backgroundTint="#94FADB"
+                        android:contentDescription="@string/load_chat_from_url"
+                        android:minHeight="50dp"
                         android:src="@android:drawable/ic_media_play" />
 
                     <ImageButton
-                        android:id="@+id/deleteButtonURL"
+                        android:id="@+id/buttonDeleteUrl"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
                         android:background="@drawable/rounded_button"
                         android:backgroundTint="#E05F80"
                         android:contentDescription="@string/delete_content_in_script_section"
+                        android:minHeight="50dp"
                         app:srcCompat="@android:drawable/ic_menu_delete" />
                 </LinearLayout>
 
@@ -130,28 +128,24 @@
                         android:layout_marginEnd="10dp"
                         android:background="@drawable/rounded_button"
                         android:backgroundTint="#93F9DA"
+                        android:contentDescription="@string/load_widget_defined"
+                        android:minHeight="50dp"
                         android:src="@android:drawable/ic_media_play" />
 
                     <ImageButton
                         android:id="@+id/buttonDeleteScript"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
                         android:background="@drawable/rounded_button"
                         android:backgroundTint="#DF5F80"
+                        android:contentDescription="@string/delete_the_content_defined_in_the_script"
+                        android:minHeight="50dp"
                         android:src="@android:drawable/ic_menu_delete" />
 
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Button to delete URL -->
-
-            <!-- EditText for Script -->
-
-            <!-- Button to load script -->
-
-            <!-- WebView -->
             <WebView
                 android:id="@+id/webviewLCW"
                 android:layout_width="match_parent"

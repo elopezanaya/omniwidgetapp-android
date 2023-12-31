@@ -7,4 +7,7 @@
     <string name="load_from_url">Load from URL</string>
     <string name="delete_url">Delete URL</string>
     <string name="delete_content_in_script_section">delete content in script section</string>
+    <string name="load_chat_from_url">Load chat from URL</string>
+    <string name="load_widget_defined">Load widget defined</string>
+    <string name="delete_the_content_defined_in_the_script">Delete the content defined in the script</string>
 </resources>

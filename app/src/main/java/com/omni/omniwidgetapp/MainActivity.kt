@@ -12,7 +12,7 @@ import android.widget.ImageButton
 
 class MainActivity : AppCompatActivity() {
     private lateinit var editTextUrl: EditText
-    private lateinit var editTextData: EditText
+    private lateinit var editTextScript: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +23,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initUrlFunctionality() {
-        val launchButton: ImageButton = findViewById<ImageButton>(R.id.buttonLoadUrl)
+        val launchButton: ImageButton = findViewById(R.id.buttonLoadUrl)
+        val deleteUrlContent : ImageButton = findViewById(R.id.buttonDeleteUrl)
+
         editTextUrl = findViewById(R.id.editTextUrl)
 
         launchButton.setOnClickListener {
@@ -34,20 +36,30 @@ class MainActivity : AppCompatActivity() {
                 wb.loadUrl(editTextUrl.text.toString())
             }
         }
+
+        deleteUrlContent.setOnClickListener {
+            editTextUrl.setText("")
+        }
     }
 
     private fun initScriptFunctionality() {
-        val launchScriptButton: ImageButton = findViewById<ImageButton>(R.id.buttonLoadScript)
-        editTextData = findViewById(R.id.editTextScript)
+        val launchScriptButton: ImageButton = findViewById(R.id.buttonLoadScript)
+        val deleteScriptContent : ImageButton = findViewById(R.id.buttonDeleteScript)
+
+        editTextScript = findViewById(R.id.editTextScript)
 
         launchScriptButton.setOnClickListener {
             val wb = findViewById<WebView>(R.id.webviewLCW)
             setViewSettings(wb)
 
-            val script = editTextData.text.toString()
+            val script = editTextScript.text.toString()
             if (script.isNotEmpty()) {
                 wb.loadData(script, "text/html", "UTF-8")
             }
+        }
+
+        deleteScriptContent.setOnClickListener {
+            editTextScript.setText("")
         }
     }
 
