@@ -1,4 +1,4 @@
-# Omniwwidget Android App
+# Omniwidget Android App
 
 This app allows to load the content from an specific URL and display it at the bottom in the web view, or use the script to display a html with the embedded code.
 
