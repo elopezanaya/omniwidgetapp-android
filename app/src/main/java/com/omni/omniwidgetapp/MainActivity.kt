@@ -21,8 +21,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        preloadUrl();
         initUrlFunctionality()
         initScriptFunctionality()
+    }
+
+    @SuppressLint("SetJavaScriptEnabled")
+    private fun preloadUrl(){
+        val myWebView: WebView = findViewById(R.id.webviewLCW)
+        myWebView.settings.javaScriptEnabled = true
+        myWebView.loadUrl("https://www.clockfaceonline.co.uk/clocks/digital/")
+
     }
 
     private fun initUrlFunctionality() {
