@@ -1,14 +1,17 @@
 package com.omni.omniwidgetapp
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.webkit.ConsoleMessage
+import android.webkit.PermissionRequest
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.widget.EditText
 import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var editTextUrl: EditText
@@ -69,6 +72,17 @@ class MainActivity : AppCompatActivity() {
             override fun onConsoleMessage(consoleMessage: ConsoleMessage?): Boolean {
                 Log.d("WebView", "Console: ${consoleMessage?.message()}")
                 return true
+            }
+
+            override fun onPermissionRequest(request: PermissionRequest?) {
+                runOnUiThread {
+                    val permissions = arrayOf(
+                        PermissionRequest.RESOURCE_AUDIO_CAPTURE,
+                        PermissionRequest.RESOURCE_VIDEO_CAPTURE,
+
+                    )
+                    request!!.grant(permissions)
+                }
             }
         }
 
